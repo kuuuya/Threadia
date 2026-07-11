@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Threadia.UnitTests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlocks\Threadia.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\..\Contracts\Threadia.Contracts.csproj" />
+    <ProjectReference Include="..\Conversations\Threadia.Modules.Conversations.csproj" />
+  </ItemGroup>
+
+</Project>

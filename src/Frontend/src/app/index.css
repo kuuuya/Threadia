@@ -1,0 +1,431 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  color: #1d1c1d;
+  background: #f8f8f8;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  background: #fff;
+  padding: 4px 10px;
+  font-size: 13px;
+}
+
+button:hover {
+  background: #f0f0f0;
+}
+
+input,
+select {
+  border: 1px solid #c9c9c9;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 13px;
+}
+
+/* --- 認証画面 --- */
+.auth-page {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.auth-card {
+  width: 340px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-card h1 {
+  margin: 0;
+  text-align: center;
+  color: #4a154b;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.auth-tabs button {
+  flex: 1;
+}
+
+.auth-tabs button.active {
+  background: #4a154b;
+  color: #fff;
+  border-color: #4a154b;
+}
+
+.auth-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+/* --- ホーム画面 --- */
+.home-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  height: 100vh;
+}
+
+.sidebar {
+  background: #3f0e40;
+  color: #f8f8f8;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar h3 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #bcabbc;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header .me {
+  font-weight: 600;
+}
+
+.inline-form {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.conversation-list,
+.member-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.conversation-list button,
+.member-list button {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: #d8cfd8;
+  padding: 6px 8px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conversation-list button:hover,
+.member-list button:hover {
+  background: #522653;
+}
+
+.conversation-list button.selected {
+  background: #1164a3;
+  color: #fff;
+}
+
+.member-list label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 13px;
+  padding: 2px 8px;
+}
+
+.member-list label input[type="checkbox"] {
+  width: auto;
+}
+
+.badge {
+  background: #e01e5a;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 11px;
+  padding: 1px 7px;
+}
+
+/* --- チャット画面 --- */
+.main-pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.empty-state {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: #888;
+}
+
+.chat-pane {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.status {
+  font-size: 12px;
+}
+
+.status.online {
+  color: #2eb67d;
+}
+
+.status.offline {
+  color: #c0392b;
+}
+
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.load-older {
+  align-self: center;
+}
+
+.message {
+  max-width: 70%;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 8px 12px;
+  align-self: flex-start;
+}
+
+.message.own {
+  align-self: flex-end;
+  background: #e8f5fa;
+}
+
+.message p {
+  margin: 4px 0 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.message .deleted {
+  color: #999;
+  font-style: italic;
+}
+
+.message-meta {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  font-size: 12px;
+  color: #666;
+}
+
+.message-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.message-actions button {
+  font-size: 11px;
+  padding: 2px 6px;
+}
+
+.edit-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.composer {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid #e0e0e0;
+  background: #fff;
+  position: relative;
+}
+
+.composer-tools {
+  display: flex;
+  gap: 4px;
+}
+
+.mention-picker {
+  position: absolute;
+  bottom: 56px;
+  left: 16px;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.mention-picker button {
+  border: none;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: 0;
+}
+
+.mention {
+  background: #fff3cd;
+  color: #6b4e00;
+  border-radius: 3px;
+  padding: 0 2px;
+  font-weight: 600;
+}
+
+/* --- 添付ファイル --- */
+.attachment-list,
+.pending-attachments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.pending-attachments {
+  padding: 6px 16px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.attachment-chip {
+  font-size: 12px;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 3px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.remove-chip {
+  border: none;
+  background: transparent;
+  padding: 0 2px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* --- Presence --- */
+.presence-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #b0b0b0;
+  margin-right: 6px;
+}
+
+.presence-dot.online {
+  background: #2eb67d;
+}
+
+/* --- 検索 --- */
+.search-bar {
+  position: relative;
+  padding: 8px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 16px;
+  right: 16px;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  max-height: 320px;
+  overflow-y: auto;
+  z-index: 20;
+}
+
+.search-result {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid #eee;
+  border-radius: 0;
+  padding: 8px 12px;
+}
+
+.search-result-meta {
+  font-size: 11px;
+  color: #777;
+}
+
+.search-empty {
+  margin: 0;
+  padding: 12px;
+  font-size: 13px;
+  color: #888;
+}
+
+.push-status {
+  font-size: 12px;
+  color: #bcabbc;
+  margin: 6px 0 0;
+}

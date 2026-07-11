@@ -1,0 +1,49 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Backend/" />
+  <Folder Name="/src/Backend/Api/">
+    <Project Path="src/Backend/Api/Threadia.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Backend/BuildingBlocks/">
+    <Project Path="src/Backend/BuildingBlocks/Threadia.BuildingBlocks.csproj" />
+  </Folder>
+  <Folder Name="/src/Backend/Contracts/">
+    <Project Path="src/Backend/Contracts/Threadia.Contracts.csproj" />
+  </Folder>
+  <Folder Name="/src/Backend/Modules/" />
+  <Folder Name="/src/Backend/Modules/Attachments/">
+    <Project Path="src/Backend/Modules/Attachments/Threadia.Modules.Attachments.csproj" />
+  </Folder>
+  <Folder Name="/src/Backend/Modules/Conversations/">
+    <Project Path="src/Backend/Modules/Conversations/Threadia.Modules.Conversations.csproj" />
+  </Folder>
+  <Folder Name="/src/Backend/Modules/Identity/">
+    <Project Path="src/Backend/Modules/Identity/Threadia.Modules.Identity.csproj" />
+  </Folder>
+  <Folder Name="/src/Backend/Modules/Messaging/">
+    <Project Path="src/Backend/Modules/Messaging/Threadia.Modules.Messaging.csproj" />
+  </Folder>
+  <Folder Name="/src/Backend/Modules/Notifications/">
+    <Project Path="src/Backend/Modules/Notifications/Threadia.Modules.Notifications.csproj" />
+  </Folder>
+  <Folder Name="/src/Backend/Modules/Presence/">
+    <Project Path="src/Backend/Modules/Presence/Threadia.Modules.Presence.csproj" />
+  </Folder>
+  <Folder Name="/src/Backend/Modules/Search/">
+    <Project Path="src/Backend/Modules/Search/Threadia.Modules.Search.csproj" />
+  </Folder>
+  <Folder Name="/src/Backend/Modules/Workspaces/">
+    <Project Path="src/Backend/Modules/Workspaces/Threadia.Modules.Workspaces.csproj" />
+  </Folder>
+  <Folder Name="/src/Backend/Workers/">
+    <Project Path="src/Backend/Workers/Threadia.Workers.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+  <Folder Name="/tests/Backend/" />
+  <Folder Name="/tests/Backend/IntegrationTests/">
+    <Project Path="tests/Backend/IntegrationTests/Threadia.IntegrationTests.csproj" />
+  </Folder>
+  <Folder Name="/tests/Backend/UnitTests/">
+    <Project Path="tests/Backend/UnitTests/Threadia.UnitTests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.StackExchangeRedis" Version="10.0.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.*">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BuildingBlocks\Threadia.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\Modules\Identity\Threadia.Modules.Identity.csproj" />
+    <ProjectReference Include="..\Modules\Workspaces\Threadia.Modules.Workspaces.csproj" />
+    <ProjectReference Include="..\Modules\Conversations\Threadia.Modules.Conversations.csproj" />
+    <ProjectReference Include="..\Modules\Messaging\Threadia.Modules.Messaging.csproj" />
+    <ProjectReference Include="..\Modules\Presence\Threadia.Modules.Presence.csproj" />
+    <ProjectReference Include="..\Modules\Attachments\Threadia.Modules.Attachments.csproj" />
+    <ProjectReference Include="..\Modules\Notifications\Threadia.Modules.Notifications.csproj" />
+    <ProjectReference Include="..\Modules\Search\Threadia.Modules.Search.csproj" />
+  </ItemGroup>
+
+</Project>

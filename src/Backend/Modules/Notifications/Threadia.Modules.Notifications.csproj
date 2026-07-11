@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.*" />
+    <!-- Web Push の RFC 8291 暗号化・VAPID 署名は自前実装が現実的でないため、標準ライブラリを使用する -->
+    <PackageReference Include="WebPush" Version="1.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlocks\Threadia.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\..\Contracts\Threadia.Contracts.csproj" />
+    <ProjectReference Include="..\Conversations\Threadia.Modules.Conversations.csproj" />
+    <ProjectReference Include="..\Identity\Threadia.Modules.Identity.csproj" />
+    <ProjectReference Include="..\Presence\Threadia.Modules.Presence.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+# .NET
+bin/
+obj/
+*.user
+.vs/
+
+# Frontend
+node_modules/
+dist/
+coverage/
+
+# 環境依存・秘密情報
+.env
+*.local.env
+appsettings.*.local.json
+
+# IDE
+.idea/
+*.swp

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\BuildingBlocks\Threadia.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\Modules\Attachments\Threadia.Modules.Attachments.csproj" />
+    <ProjectReference Include="..\Modules\Conversations\Threadia.Modules.Conversations.csproj" />
+    <ProjectReference Include="..\Modules\Identity\Threadia.Modules.Identity.csproj" />
+    <ProjectReference Include="..\Modules\Notifications\Threadia.Modules.Notifications.csproj" />
+    <ProjectReference Include="..\Modules\Presence\Threadia.Modules.Presence.csproj" />
+    <ProjectReference Include="..\Modules\Search\Threadia.Modules.Search.csproj" />
+    <ProjectReference Include="..\Modules\Workspaces\Threadia.Modules.Workspaces.csproj" />
+  </ItemGroup>
+
+</Project>
